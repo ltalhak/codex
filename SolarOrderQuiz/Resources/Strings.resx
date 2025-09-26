@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AppTitle" xml:space="preserve">
+    <value>SolarOrderQuiz</value>
+  </data>
+  <data name="PlanetPaletteTitle" xml:space="preserve">
+    <value>Gezegen Paleti</value>
+  </data>
+  <data name="OrbitAreaTitle" xml:space="preserve">
+    <value>Yörüngeler Alanı</value>
+  </data>
+  <data name="StatusPanelTitle" xml:space="preserve">
+    <value>Durum</value>
+  </data>
+  <data name="RemainingPlanets" xml:space="preserve">
+    <value>Kalan Gezegen</value>
+  </data>
+  <data name="CorrectAnswers" xml:space="preserve">
+    <value>Doğru</value>
+  </data>
+  <data name="IncorrectAnswers" xml:space="preserve">
+    <value>Yanlış</value>
+  </data>
+  <data name="Score" xml:space="preserve">
+    <value>Skor</value>
+  </data>
+  <data name="Time" xml:space="preserve">
+    <value>Süre</value>
+  </data>
+  <data name="Reset" xml:space="preserve">
+    <value>Sıfırla</value>
+  </data>
+  <data name="Retry" xml:space="preserve">
+    <value>Yeniden Dene</value>
+  </data>
+  <data name="SummaryTitle" xml:space="preserve">
+    <value>Özet</value>
+  </data>
+  <data name="SummaryDescription" xml:space="preserve">
+    <value>Tüm gezegenleri başarıyla yerleştirdiniz!</value>
+  </data>
+  <data name="SummaryCorrect" xml:space="preserve">
+    <value>Doğru Sayısı</value>
+  </data>
+  <data name="SummaryIncorrect" xml:space="preserve">
+    <value>Yanlış Sayısı</value>
+  </data>
+  <data name="SummaryTime" xml:space="preserve">
+    <value>Toplam Süre</value>
+  </data>
+  <data name="SummaryScore" xml:space="preserve">
+    <value>Toplam Skor</value>
+  </data>
+  <data name="SummaryBonus" xml:space="preserve">
+    <value>Zaman Bonusu</value>
+  </data>
+  <data name="Continue" xml:space="preserve">
+    <value>Devam</value>
+  </data>
+  <data name="Confirm" xml:space="preserve">
+    <value>Onayla</value>
+  </data>
+  <data name="QuestionTitleFormat" xml:space="preserve">
+    <value>{0} Sorusu</value>
+  </data>
+  <data name="CorrectAnswerFeedback" xml:space="preserve">
+    <value>Harika! Doğru cevap.</value>
+  </data>
+  <data name="IncorrectAnswerFeedback" xml:space="preserve">
+    <value>Yanlış cevap.</value>
+  </data>
+  <data name="Load" xml:space="preserve">
+    <value>Yükle</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>Kaydet</value>
+  </data>
+  <data name="LoadSuccess" xml:space="preserve">
+    <value>Oyun durumu yüklendi.</value>
+  </data>
+  <data name="LoadFailed" xml:space="preserve">
+    <value>Oyun durumu yüklenemedi.</value>
+  </data>
+  <data name="SaveSuccess" xml:space="preserve">
+    <value>Oyun durumu kaydedildi.</value>
+  </data>
+  <data name="SaveFailed" xml:space="preserve">
+    <value>Oyun durumu kaydedilemedi.</value>
+  </data>
+  <data name="SummaryRetry" xml:space="preserve">
+    <value>Yeniden Başlat</value>
+  </data>
+  <data name="SummaryClose" xml:space="preserve">
+    <value>Kapat</value>
+  </data>
+  <data name="PaletteTooltip" xml:space="preserve">
+    <value>Gezegeni uygun yörüngesine sürükleyin.</value>
+  </data>
+  <data name="OrbitTooltip" xml:space="preserve">
+    <value>Doğru gezegeni bu yörüngeye bırakın.</value>
+  </data>
+  <data name="SummaryAccuracy" xml:space="preserve">
+    <value>Doğruluk</value>
+  </data>
+  <data name="OrbitOccupiedMessage" xml:space="preserve">
+    <value>{0} yörüngesi dolu.</value>
+  </data>
+  <data name="OrbitMismatchMessage" xml:space="preserve">
+    <value>{0} doğru yörünge değil.</value>
+  </data>
+</root>

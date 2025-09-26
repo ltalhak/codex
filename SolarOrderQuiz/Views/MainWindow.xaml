@@ -1,0 +1,205 @@
+<Window x:Class="SolarOrderQuiz.Views.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:behaviors="clr-namespace:SolarOrderQuiz.Behaviors"
+        xmlns:converters="clr-namespace:SolarOrderQuiz.Converters"
+        xmlns:resources="clr-namespace:SolarOrderQuiz.Resources"
+        xmlns:vm="clr-namespace:SolarOrderQuiz.ViewModels"
+        mc:Ignorable="d"
+        Title="{x:Static resources:Strings.AppTitle}"
+        Width="1280"
+        Height="800"
+        Background="#0B132B"
+        WindowStartupLocation="CenterScreen">
+    <Window.Resources>
+        <converters:BooleanToVisibilityConverter x:Key="BoolToVisibility" CollapseWhenFalse="True" />
+        <converters:NullToVisibilityConverter x:Key="NullToVisibility" />
+        <converters:NullToVisibilityConverter x:Key="NullToVisibilityInverse" Invert="True" />
+        <Style x:Key="OrbitDropStyle" TargetType="Border">
+            <Setter Property="Background" Value="#660B132B" />
+            <Setter Property="BorderBrush" Value="#334B5C" />
+            <Setter Property="BorderThickness" Value="2" />
+            <Setter Property="CornerRadius" Value="300" />
+            <Setter Property="HorizontalAlignment" Value="Center" />
+            <Setter Property="VerticalAlignment" Value="Center" />
+            <Setter Property="RenderTransform">
+                <Setter.Value>
+                    <TranslateTransform />
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding ShowError}" Value="True">
+                    <DataTrigger.EnterActions>
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TranslateTransform.X)">
+                                    <LinearDoubleKeyFrame Value="-8" KeyTime="0:0:0.0" />
+                                    <LinearDoubleKeyFrame Value="8" KeyTime="0:0:0.1" />
+                                    <LinearDoubleKeyFrame Value="-6" KeyTime="0:0:0.2" />
+                                    <LinearDoubleKeyFrame Value="0" KeyTime="0:0:0.3" />
+                                </DoubleAnimationUsingKeyFrames>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </DataTrigger.EnterActions>
+                </DataTrigger>
+                <DataTrigger Binding="{Binding ShowSuccess}" Value="True">
+                    <Setter Property="BorderBrush" Value="{StaticResource SuccessBrush}" />
+                    <Setter Property="BorderThickness" Value="4" />
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
+    </Window.Resources>
+    <Grid Margin="16">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="260" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="280" />
+        </Grid.ColumnDefinitions>
+
+        <!-- Planet Palette -->
+        <Border Grid.Column="0" Background="#162447" Margin="0,0,12,0" Padding="12" ToolTip="{x:Static resources:Strings.PaletteTooltip}">
+            <DockPanel>
+                <TextBlock Text="{x:Static resources:Strings.PlanetPaletteTitle}" FontSize="20" FontWeight="Bold" Margin="0,0,0,12" DockPanel.Dock="Top" />
+                <ItemsControl ItemsSource="{Binding PalettePlanets}">
+                    <ItemsControl.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <WrapPanel IsItemsHost="True" Orientation="Horizontal" />
+                        </ItemsPanelTemplate>
+                    </ItemsControl.ItemsPanel>
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate DataType="{x:Type vm:PlanetItemViewModel}">
+                            <Border Margin="4" Padding="6" Background="#1F4068" CornerRadius="12">
+                                <StackPanel>
+                                    <Image Width="72" Height="72" Source="{Binding Image}" RenderOptions.BitmapScalingMode="Fant" Focusable="False" />
+                                    <TextBlock Text="{Binding DisplayName}" HorizontalAlignment="Center" Margin="0,4,0,0" />
+                                </StackPanel>
+                                <behaviors:DragDropBehavior.DragData>
+                                    <Binding />
+                                </behaviors:DragDropBehavior.DragData>
+                            </Border>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
+            </DockPanel>
+        </Border>
+
+        <!-- Orbits Area -->
+        <Border Grid.Column="1" Background="#16213E" Margin="12,0" Padding="12" ToolTip="{x:Static resources:Strings.OrbitTooltip}">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <TextBlock Text="{x:Static resources:Strings.OrbitAreaTitle}" FontSize="20" FontWeight="Bold" Margin="0,0,0,8" />
+                <Viewbox Grid.Row="1" Stretch="Uniform">
+                    <Grid Width="600" Height="600">
+                        <Image Width="140" Height="140" Source="{StaticResource SunImage}" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <Image.Effect>
+                                <DropShadowEffect BlurRadius="20" Color="#F4A261" ShadowDepth="0" />
+                            </Image.Effect>
+                        </Image>
+                        <ItemsControl ItemsSource="{Binding OrbitSlots}">
+                            <ItemsControl.ItemsPanel>
+                                <ItemsPanelTemplate>
+                                    <Canvas Width="600" Height="600" />
+                                </ItemsPanelTemplate>
+                            </ItemsControl.ItemsPanel>
+                            <ItemsControl.ItemContainerStyle>
+                                <Style TargetType="ContentPresenter">
+                                    <Setter Property="Canvas.Left" Value="{Binding CanvasOffset}" />
+                                    <Setter Property="Canvas.Top" Value="{Binding CanvasOffset}" />
+                                </Style>
+                            </ItemsControl.ItemContainerStyle>
+                            <ItemsControl.ItemTemplate>
+                                <DataTemplate DataType="{x:Type vm:OrbitSlotViewModel}">
+                                    <Grid Width="{Binding OrbitSize}" Height="{Binding OrbitSize}">
+                                        <Ellipse Stroke="#334B5C" StrokeThickness="2" />
+                                        <Border Style="{StaticResource OrbitDropStyle}"
+                                                behaviors:DragDropBehavior.DropCommand="{Binding DropCommand}">
+                                            <Grid>
+                                                <Image Width="96" Height="96" Source="{Binding Planet.Image}" Visibility="{Binding Planet, Converter={StaticResource NullToVisibility}}" />
+                                                <TextBlock Text="{Binding DisplayName}" Foreground="#88FFFFFF" FontSize="14" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,12" Visibility="{Binding Planet, Converter={StaticResource NullToVisibilityInverse}}" />
+                                            </Grid>
+                                        </Border>
+                                    </Grid>
+                                </DataTemplate>
+                            </ItemsControl.ItemTemplate>
+                        </ItemsControl>
+                    </Grid>
+                </Viewbox>
+            </Grid>
+        </Border>
+
+        <!-- Status Panel -->
+        <Border Grid.Column="2" Background="#1F4068" Padding="12" Margin="12,0,0,0">
+            <StackPanel>
+                <TextBlock Text="{x:Static resources:Strings.StatusPanelTitle}" FontSize="20" FontWeight="Bold" Margin="0,0,0,12" />
+                <StackPanel Margin="0,0,0,8">
+                    <TextBlock Text="{x:Static resources:Strings.Time}" FontWeight="SemiBold" />
+                    <TextBlock Text="{Binding ElapsedTime}" FontSize="20" />
+                </StackPanel>
+                <StackPanel Margin="0,0,0,8">
+                    <TextBlock Text="{x:Static resources:Strings.RemainingPlanets}" FontWeight="SemiBold" />
+                    <TextBlock Text="{Binding RemainingPlanets}" FontSize="18" />
+                </StackPanel>
+                <StackPanel Margin="0,0,0,8">
+                    <TextBlock Text="{x:Static resources:Strings.Score}" FontWeight="SemiBold" />
+                    <TextBlock Text="{Binding Score}" FontSize="18" />
+                </StackPanel>
+                <StackPanel Margin="0,0,0,8">
+                    <TextBlock Text="{x:Static resources:Strings.CorrectAnswers}" FontWeight="SemiBold" />
+                    <TextBlock Text="{Binding CorrectAnswers}" FontSize="16" />
+                </StackPanel>
+                <StackPanel Margin="0,0,0,8">
+                    <TextBlock Text="{x:Static resources:Strings.IncorrectAnswers}" FontWeight="SemiBold" />
+                    <TextBlock Text="{Binding IncorrectAnswers}" FontSize="16" />
+                </StackPanel>
+                <StackPanel Margin="0,0,0,8">
+                    <TextBlock Text="{x:Static resources:Strings.SummaryAccuracy}" FontWeight="SemiBold" />
+                    <TextBlock Text="{Binding Accuracy, StringFormat={}{0:F1}%}" FontSize="16" />
+                </StackPanel>
+                <TextBlock Text="{Binding StatusMessage}" TextWrapping="Wrap" Margin="0,8,0,8" />
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" Margin="0,12,0,0">
+                    <Button Content="{x:Static resources:Strings.Reset}" Command="{Binding ResetCommand}" />
+                    <Button Content="{x:Static resources:Strings.Retry}" Command="{Binding RetryCommand}" />
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" Margin="0,12,0,0">
+                    <Button Content="{x:Static resources:Strings.Save}" Command="{Binding SaveCommand}" />
+                    <Button Content="{x:Static resources:Strings.Load}" Command="{Binding LoadCommand}" />
+                </StackPanel>
+            </StackPanel>
+        </Border>
+
+        <!-- Summary Overlay -->
+        <Border Grid.ColumnSpan="3" Background="#CC0B132B" Visibility="{Binding IsSummaryVisible, Converter={StaticResource BoolToVisibility}}">
+            <Grid>
+                <Border Background="#1F4068" Padding="24" Width="420" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <StackPanel>
+                        <TextBlock Text="{x:Static resources:Strings.SummaryTitle}" FontSize="24" FontWeight="Bold" Margin="0,0,0,12" HorizontalAlignment="Center" />
+                        <TextBlock Text="{x:Static resources:Strings.SummaryDescription}" TextWrapping="Wrap" Margin="0,0,0,16" TextAlignment="Center" />
+                        <UniformGrid Columns="2" Margin="0,0,0,12">
+                            <TextBlock Text="{x:Static resources:Strings.SummaryScore}" FontWeight="SemiBold" />
+                            <TextBlock Text="{Binding Score}" />
+                            <TextBlock Text="{x:Static resources:Strings.SummaryBonus}" FontWeight="SemiBold" />
+                            <TextBlock Text="{Binding BonusScore}" />
+                            <TextBlock Text="{x:Static resources:Strings.SummaryCorrect}" FontWeight="SemiBold" />
+                            <TextBlock Text="{Binding CorrectAnswers}" />
+                            <TextBlock Text="{x:Static resources:Strings.SummaryIncorrect}" FontWeight="SemiBold" />
+                            <TextBlock Text="{Binding IncorrectAnswers}" />
+                            <TextBlock Text="{x:Static resources:Strings.SummaryTime}" FontWeight="SemiBold" />
+                            <TextBlock Text="{Binding ElapsedTime}" />
+                            <TextBlock Text="{x:Static resources:Strings.SummaryAccuracy}" FontWeight="SemiBold" />
+                            <TextBlock Text="{Binding Accuracy, StringFormat={}{0:F1}%}" />
+                        </UniformGrid>
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                            <Button Content="{x:Static resources:Strings.SummaryRetry}" Command="{Binding RetryCommand}" />
+                            <Button Content="{x:Static resources:Strings.SummaryClose}" Command="{Binding ResetCommand}" Margin="12,0,0,0" />
+                        </StackPanel>
+                    </StackPanel>
+                </Border>
+            </Grid>
+        </Border>
+    </Grid>
+</Window>
