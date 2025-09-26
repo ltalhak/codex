@@ -1,0 +1,290 @@
+[
+  {
+    "id": "mercury-distance",
+    "planetId": "mercury",
+    "text": "Merkür Güneş'e göre hangi sıradadır?",
+    "explanation": "Merkür Güneş'e en yakın gezegendir ve yörüngesini 88 günde tamamlar.",
+    "choices": [
+      { "key": "A", "text": "Birinci", "isCorrect": true },
+      { "key": "B", "text": "İkinci", "isCorrect": false },
+      { "key": "C", "text": "Üçüncü", "isCorrect": false },
+      { "key": "D", "text": "Dördüncü", "isCorrect": false }
+    ]
+  },
+  {
+    "id": "mercury-atmosphere",
+    "planetId": "mercury",
+    "text": "Merkür'ün atmosferi nasıldır?",
+    "explanation": "Merkür'ün atmosferi yok denecek kadar incedir; yüzeyi doğrudan Güneş rüzgârına maruz kalır.",
+    "choices": [
+      { "key": "A", "text": "Yoğun karbondioksit", "isCorrect": false },
+      { "key": "B", "text": "Azotça zengin", "isCorrect": false },
+      { "key": "C", "text": "Çok seyrek ve ince", "isCorrect": true },
+      { "key": "D", "text": "Kalın hidrojen", "isCorrect": false }
+    ]
+  },
+  {
+    "id": "mercury-rotation",
+    "planetId": "mercury",
+    "text": "Merkür'ün dönüş süresi hakkında hangisi doğrudur?",
+    "explanation": "Merkür kendi ekseni etrafında yaklaşık 59 Dünya gününde döner.",
+    "choices": [
+      { "key": "A", "text": "24 saatten kısa", "isCorrect": false },
+      { "key": "B", "text": "Yaklaşık 59 Dünya günü", "isCorrect": true },
+      { "key": "C", "text": "365 Dünya günü", "isCorrect": false },
+      { "key": "D", "text": "12 Dünya günü", "isCorrect": false }
+    ]
+  },
+  {
+    "id": "venus-temperature",
+    "planetId": "venus",
+    "text": "Venüs'ün yüzey sıcaklığı neden çok yüksektir?",
+    "explanation": "Venüs'ün yoğun karbondioksit atmosferi güçlü sera etkisi yaratır ve yüzeyi 460°C civarına taşır.",
+    "choices": [
+      { "key": "A", "text": "Güneş'e en yakın olması", "isCorrect": false },
+      { "key": "B", "text": "Atmosferinin hidrojen içermesi", "isCorrect": false },
+      { "key": "C", "text": "Yoğun sera etkisi", "isCorrect": true },
+      { "key": "D", "text": "Halka sistemi", "isCorrect": false }
+    ]
+  },
+  {
+    "id": "venus-rotation",
+    "planetId": "venus",
+    "text": "Venüs'ün dönme yönü için hangisi doğrudur?",
+    "explanation": "Venüs ters (retrograd) yönde döner; Güneş'ten baktığımızda saat yönünde hareket eder.",
+    "choices": [
+      { "key": "A", "text": "Dünya ile aynı yönde döner", "isCorrect": false },
+      { "key": "B", "text": "Kutupları yoktur", "isCorrect": false },
+      { "key": "C", "text": "Retrograd yani ters yönde döner", "isCorrect": true },
+      { "key": "D", "text": "Hiç dönmez", "isCorrect": false }
+    ]
+  },
+  {
+    "id": "venus-clouds",
+    "planetId": "venus",
+    "text": "Venüs bulutları çoğunlukla hangi bileşenden oluşur?",
+    "explanation": "Venüs'ün kalın bulut tabakası büyük ölçüde sülfürik asit damlacıklarından oluşur.",
+    "choices": [
+      { "key": "A", "text": "Su buharı", "isCorrect": false },
+      { "key": "B", "text": "Sülfürik asit", "isCorrect": true },
+      { "key": "C", "text": "Amonyak", "isCorrect": false },
+      { "key": "D", "text": "Metan", "isCorrect": false }
+    ]
+  },
+  {
+    "id": "earth-moon",
+    "planetId": "earth",
+    "text": "Dünya'nın doğal uydu sayısı kaçtır?",
+    "explanation": "Dünya'nın tek doğal uydusu Ay'dır.",
+    "choices": [
+      { "key": "A", "text": "1", "isCorrect": true },
+      { "key": "B", "text": "2", "isCorrect": false },
+      { "key": "C", "text": "4", "isCorrect": false },
+      { "key": "D", "text": "0", "isCorrect": false }
+    ]
+  },
+  {
+    "id": "earth-water",
+    "planetId": "earth",
+    "text": "Dünya yüzeyinin yaklaşık yüzde kaçı suyla kaplıdır?",
+    "explanation": "Dünya yüzeyinin yaklaşık %71'i okyanuslarla kaplıdır.",
+    "choices": [
+      { "key": "A", "text": "%10", "isCorrect": false },
+      { "key": "B", "text": "%30", "isCorrect": false },
+      { "key": "C", "text": "%50", "isCorrect": false },
+      { "key": "D", "text": "%70'ten fazla", "isCorrect": true }
+    ]
+  },
+  {
+    "id": "earth-day",
+    "planetId": "earth",
+    "text": "Dünya'nın dönüş süresi (bir gün) kaç saattir?",
+    "explanation": "Dünya kendi ekseni etrafında yaklaşık 23 saat 56 dakikada döner; bunu 24 saat olarak yuvarlarız.",
+    "choices": [
+      { "key": "A", "text": "12 saat", "isCorrect": false },
+      { "key": "B", "text": "18 saat", "isCorrect": false },
+      { "key": "C", "text": "24 saat", "isCorrect": true },
+      { "key": "D", "text": "36 saat", "isCorrect": false }
+    ]
+  },
+  {
+    "id": "mars-color",
+    "planetId": "mars",
+    "text": "Mars'ın kırmızı görünmesinin nedeni nedir?",
+    "explanation": "Mars yüzeyindeki demir oksit (pas) mineralleri ışığı kırmızımsı yansıtır.",
+    "choices": [
+      { "key": "A", "text": "Lav okyanusları", "isCorrect": false },
+      { "key": "B", "text": "Demir oksitli toz", "isCorrect": true },
+      { "key": "C", "text": "Sülfürik asit yağmuru", "isCorrect": false },
+      { "key": "D", "text": "Kalın metan atmosferi", "isCorrect": false }
+    ]
+  },
+  {
+    "id": "mars-moons",
+    "planetId": "mars",
+    "text": "Mars'ın kaç küçük uydusu vardır?",
+    "explanation": "Mars'ın Phobos ve Deimos adlı iki küçük uydusu bulunur.",
+    "choices": [
+      { "key": "A", "text": "1", "isCorrect": false },
+      { "key": "B", "text": "2", "isCorrect": true },
+      { "key": "C", "text": "4", "isCorrect": false },
+      { "key": "D", "text": "6", "isCorrect": false }
+    ]
+  },
+  {
+    "id": "mars-water",
+    "planetId": "mars",
+    "text": "Mars yüzeyinde suyun hali nasıldır?",
+    "explanation": "Mars'ın günümüzdeki yüzeyinde sıvı su kararsızdır; buz ve buhar halinde izlerine rastlanır.",
+    "choices": [
+      { "key": "A", "text": "Büyük okyanuslar vardır", "isCorrect": false },
+      { "key": "B", "text": "Tamamen kurudur, hiç su yoktur", "isCorrect": false },
+      { "key": "C", "text": "Buz ve ince buhar olarak bulunur", "isCorrect": true },
+      { "key": "D", "text": "Yoğun yağmur ormanları vardır", "isCorrect": false }
+    ]
+  },
+  {
+    "id": "jupiter-size",
+    "planetId": "jupiter",
+    "text": "Jüpiter hakkında hangisi doğrudur?",
+    "explanation": "Jüpiter Güneş Sistemi'nin en büyük gezegenidir ve hacimce diğer tüm gezegenlerin toplamından büyüktür.",
+    "choices": [
+      { "key": "A", "text": "En küçük gezegendir", "isCorrect": false },
+      { "key": "B", "text": "En büyük gezegendir", "isCorrect": true },
+      { "key": "C", "text": "Yüzeyi kayalıktır", "isCorrect": false },
+      { "key": "D", "text": "Halkası yoktur", "isCorrect": false }
+    ]
+  },
+  {
+    "id": "jupiter-greatspot",
+    "planetId": "jupiter",
+    "text": "Jüpiter'deki Büyük Kırmızı Leke nedir?",
+    "explanation": "Büyük Kırmızı Leke, Jüpiter atmosferinde yüzyıllardır süren dev bir fırtınadır.",
+    "choices": [
+      { "key": "A", "text": "Bir krater", "isCorrect": false },
+      { "key": "B", "text": "Volkan", "isCorrect": false },
+      { "key": "C", "text": "Devam eden devasa bir fırtına", "isCorrect": true },
+      { "key": "D", "text": "Buzlu dağ", "isCorrect": false }
+    ]
+  },
+  {
+    "id": "jupiter-moons",
+    "planetId": "jupiter",
+    "text": "Jüpiter'in bilinen uydu sayısı hangisine en yakındır?",
+    "explanation": "Jüpiter'in 90'dan fazla onaylı uydusu vardır ve sayı zamanla artmaktadır.",
+    "choices": [
+      { "key": "A", "text": "4", "isCorrect": false },
+      { "key": "B", "text": "8", "isCorrect": false },
+      { "key": "C", "text": "80'den fazla", "isCorrect": true },
+      { "key": "D", "text": "15", "isCorrect": false }
+    ]
+  },
+  {
+    "id": "saturn-rings",
+    "planetId": "saturn",
+    "text": "Satürn'ün en belirgin özelliği nedir?",
+    "explanation": "Satürn'ün büyük ve parlak halka sistemi buz ve kaya parçalarından oluşur.",
+    "choices": [
+      { "key": "A", "text": "Yoğun atmosferik karbondioksit", "isCorrect": false },
+      { "key": "B", "text": "Görkemli halka sistemi", "isCorrect": true },
+      { "key": "C", "text": "Lav denizleri", "isCorrect": false },
+      { "key": "D", "text": "Yüzlerce yanardağ", "isCorrect": false }
+    ]
+  },
+  {
+    "id": "saturn-density",
+    "planetId": "saturn",
+    "text": "Satürn'ün yoğunluğu neden dikkat çekicidir?",
+    "explanation": "Satürn'ün ortalama yoğunluğu sudan daha düşüktür; teorik olarak dev bir okyanusta yüzebilirdi.",
+    "choices": [
+      { "key": "A", "text": "Kurşundan ağır", "isCorrect": false },
+      { "key": "B", "text": "Sudan daha hafif", "isCorrect": true },
+      { "key": "C", "text": "Demir kadar yoğun", "isCorrect": false },
+      { "key": "D", "text": "Yoğunluğu bilinmiyor", "isCorrect": false }
+    ]
+  },
+  {
+    "id": "saturn-moons",
+    "planetId": "saturn",
+    "text": "Satürn'ün en büyük uydusu hangisidir?",
+    "explanation": "Titan, Satürn'ün en büyük uydusudur ve kalın azot atmosferiyle dikkat çeker.",
+    "choices": [
+      { "key": "A", "text": "Europa", "isCorrect": false },
+      { "key": "B", "text": "Titan", "isCorrect": true },
+      { "key": "C", "text": "Phobos", "isCorrect": false },
+      { "key": "D", "text": "Triton", "isCorrect": false }
+    ]
+  },
+  {
+    "id": "uranus-tilt",
+    "planetId": "uranus",
+    "text": "Uranüs'ün dönme ekseni hakkında hangisi doğrudur?",
+    "explanation": "Uranüs'ün eksen eğikliği yaklaşık 98°'dir; neredeyse yan yatmış durumda döner.",
+    "choices": [
+      { "key": "A", "text": "Eksen eğikliği yoktur", "isCorrect": false },
+      { "key": "B", "text": "Yaklaşık 98° eğiktir", "isCorrect": true },
+      { "key": "C", "text": "Sadece 5° eğiktir", "isCorrect": false },
+      { "key": "D", "text": "180° eğiktir", "isCorrect": false }
+    ]
+  },
+  {
+    "id": "uranus-composition",
+    "planetId": "uranus",
+    "text": "Uranüs atmosferindeki hâkim bileşenler hangileridir?",
+    "explanation": "Uranüs atmosferi hidrojen ve helyum içerir; metan gazı mavimsi rengini verir.",
+    "choices": [
+      { "key": "A", "text": "Karbon dioksit ve azot", "isCorrect": false },
+      { "key": "B", "text": "Hidrojen, helyum ve metan", "isCorrect": true },
+      { "key": "C", "text": "Oksijen ve su buharı", "isCorrect": false },
+      { "key": "D", "text": "Amonyak ve neon", "isCorrect": false }
+    ]
+  },
+  {
+    "id": "uranus-rings",
+    "planetId": "uranus",
+    "text": "Uranüs'ün halkaları hakkında hangisi doğrudur?",
+    "explanation": "Uranüs ince ve karanlık bir halka sistemine sahiptir; 1977'de keşfedilmiştir.",
+    "choices": [
+      { "key": "A", "text": "Hiç halkası yoktur", "isCorrect": false },
+      { "key": "B", "text": "Sadece bir geniş halka vardır", "isCorrect": false },
+      { "key": "C", "text": "İnce ve karanlık halkaları vardır", "isCorrect": true },
+      { "key": "D", "text": "Satürn'ünkünden parlaktır", "isCorrect": false }
+    ]
+  },
+  {
+    "id": "neptune-winds",
+    "planetId": "neptune",
+    "text": "Neptün atmosferinde ölçülen rüzgârlar için hangisi doğrudur?",
+    "explanation": "Neptün'deki rüzgârlar saatte 2000 km'ye yaklaşan hızlara ulaşabilir.",
+    "choices": [
+      { "key": "A", "text": "Çok zayıf rüzgârlar eser", "isCorrect": false },
+      { "key": "B", "text": "Saatte 2000 km'ye varan şiddetli rüzgârlar vardır", "isCorrect": true },
+      { "key": "C", "text": "Hiç atmosferi yoktur", "isCorrect": false },
+      { "key": "D", "text": "Rüzgârlar sadece kutuplarda görülür", "isCorrect": false }
+    ]
+  },
+  {
+    "id": "neptune-color",
+    "planetId": "neptune",
+    "text": "Neptün'ün mavi renginin ana nedeni nedir?",
+    "explanation": "Neptün atmosferindeki metan gazı kırmızı ışığı emer, geriye mavi tonlar kalır.",
+    "choices": [
+      { "key": "A", "text": "Su okyanusları", "isCorrect": false },
+      { "key": "B", "text": "Metan gazının ışık soğurması", "isCorrect": true },
+      { "key": "C", "text": "Yoğun oksijen", "isCorrect": false },
+      { "key": "D", "text": "Buz dağları", "isCorrect": false }
+    ]
+  },
+  {
+    "id": "neptune-moons",
+    "planetId": "neptune",
+    "text": "Neptün'ün en büyük uydusu hangisidir?",
+    "explanation": "Triton, Neptün'ün en büyük uydusudur ve geriye doğru (retrograd) yörüngede döner.",
+    "choices": [
+      { "key": "A", "text": "Titan", "isCorrect": false },
+      { "key": "B", "text": "Ganymede", "isCorrect": false },
+      { "key": "C", "text": "Triton", "isCorrect": true },
+      { "key": "D", "text": "Callisto", "isCorrect": false }
+    ]
+  }
+]
